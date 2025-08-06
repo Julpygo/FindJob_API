@@ -4,6 +4,6 @@ import {prueba, offerCreate} from "../controllers/controllers.offers.js";
 const router = Router()
 
 router.get("/",prueba);
-router.get("/offerCreate",offerCreate)
+router.post("/Create",offerCreate)
 
 export default router

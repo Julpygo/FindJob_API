@@ -17,13 +17,18 @@ const offersSchema = new Schema({
         type:[],
         required:true
     },
+    salary:{
+        type:Number,
+        required:true
+    },
+    divisa:{
+        type:String,
+        default: "COP",
+        required: true
+    },
     descripcion:{
         type:String,
         required:false
-    },
-    verified:{
-        type:Boolean,
-        default:false
     },
     requirements_min:{
         type: [],
@@ -32,7 +37,11 @@ const offersSchema = new Schema({
     requirements_opc:{
         type: [],
         required:false
-    }
+    },
+    verified:{
+        type:Boolean,
+        default:false
+    },
 })
 
 export default mongoose.model("company_offers",offersSchema)
