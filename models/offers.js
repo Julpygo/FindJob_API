@@ -15,16 +15,16 @@ const offersSchema = new Schema({
     },
     cargo:{
         type:[],
-        required:true
+        required:false
     },
     salary:{
         type:Number,
-        required:true
+        required:false
     },
     divisa:{
         type:String,
         default: "COP",
-        required: true
+        required: false
     },
     descripcion:{
         type:String,
@@ -32,7 +32,7 @@ const offersSchema = new Schema({
     },
     requirements_min:{
         type: [],
-        required:true
+        required:false
     },
     requirements_opc:{
         type: [],
