@@ -22,5 +22,13 @@ const offerCreate = async (req,res) =>{
         return res.status(error.status).json(error)   
     }
 }
+const getOffer = async (req,res)=>{
+    try {
+        const offers = await offerModel.find()
+        res.json(offers)
+    } catch (error) {
+        res.status(500).json({ error: 'Error al obtener las ofertas' });
+    }
+}
 
-export {prueba, offerCreate}
+export {getOffer, offerCreate}
